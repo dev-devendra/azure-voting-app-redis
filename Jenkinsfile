@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh(script:'java -version')
+                sh(script:'docker')
             }
         }
     }
