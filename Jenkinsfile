@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker {image 'node:1616-alpine'}
-    }
+    agent any
 
     stages {
         stage('Verify Branch') {
@@ -11,7 +9,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh(script:'docker version')
+                sh(script:'java -version')
             }
         }
     }
